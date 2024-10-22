@@ -49,12 +49,32 @@ void Scene::Input(Event* event)
 
 void Scene::Update(const Vector2f& mousePosition)
 {
+	for (auto& obj : objects)
+	{
+		obj->Update(mousePosition);
+	}
+
+	// button behavior
+
 }
 
 void Scene::Update(const float& deltaTime)
 {
+	for (auto& obj : objects)
+	{
+		obj->Update(deltaTime)
+	}
 }
 
 void Scene::Render()
 {
+	if (backGround)
+	{
+		backGround->Render(window);
+	}
+
+	for (auto& obj : objects)
+	{
+		obj->Render(window);
+	}
 }
