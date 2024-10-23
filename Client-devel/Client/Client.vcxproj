@@ -141,7 +141,6 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SignInScene.cpp" />
     <ClCompile Include="SingleGameScene.cpp" />
-    <ClCompile Include="TextButtonObject.cpp" />
     <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
@@ -157,7 +156,6 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SignInScene.h" />
     <ClInclude Include="SingleGameScene.h" />
-    <ClInclude Include="TextButtonObject.h" />
     <ClInclude Include="TextObject.h" />
     <ClInclude Include="TitleScene.h" />
   </ItemGroup>

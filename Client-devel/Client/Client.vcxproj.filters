@@ -101,9 +101,6 @@
     <ClCompile Include="SignInScene.cpp">
       <Filter>소스 파일\02.Scene\04.SignInScene</Filter>
     </ClCompile>
-    <ClCompile Include="TextButtonObject.cpp">
-      <Filter>소스 파일\03.Object\02.ButtonObject</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h">
@@ -144,9 +141,6 @@
     </ClInclude>
     <ClInclude Include="SignInScene.h">
       <Filter>소스 파일\02.Scene\04.SignInScene</Filter>
-    </ClInclude>
-    <ClInclude Include="TextButtonObject.h">
-      <Filter>소스 파일\03.Object\02.ButtonObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
