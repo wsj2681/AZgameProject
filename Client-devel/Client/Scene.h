@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Object.h"
+#include "ButtonObject.h"
+#include "TextObject.h"
 
 class Scene
 {
@@ -18,8 +20,8 @@ protected:
 	
 	Object* backGround = nullptr;
 	vector<Object*> objects;
-//	map<string, ButtonObject*> buttons;
-//	map<string, TextObject*> texts;
+	map<string, ButtonObject*> buttons;
+	map<string, TextObject*> texts;
 
 	bool Quit = false;
 

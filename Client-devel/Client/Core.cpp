@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "Core.h"
+#include "TitleScene.h"
 
 Core::Core()
 {
@@ -20,6 +21,7 @@ void Core::Init()
 	clock = new Clock;
 	frameClock = new Clock;
 
+	scenes.push(new TitleScene(&scenes, window));
 
 }
 
@@ -32,7 +34,10 @@ void Core::Destroy()
 
 	for (size_t i = 0; i < scenes.size(); ++i)
 	{
-		//delete scenes
+		scenes.top()->Destroy();
+		scenes.top() = nullptr;
+		delete scenes.top();
+		scenes.pop();
 	}
 
 }
@@ -54,7 +59,7 @@ void Core::Input()
 		{
 			if (!scenes.empty())
 			{
-				//scenes input function
+				scenes.top()->Input(event);
 			}
 			break;
 		}
@@ -86,8 +91,18 @@ void Core::Update()
 
 	if (!scenes.empty())
 	{
-		//
-		if(scenes.top())
+		if (scenes.top()->GetQuit())
+		{
+			scenes.top()->Destroy();
+			scenes.top() = nullptr;
+			delete scenes.top();
+			scenes.pop();
+		}
+		else
+		{
+			scenes.top()->Update(deltaTime);
+			scenes.top()->Update(mousePosition);
+		}
 	}
 	else
 	{

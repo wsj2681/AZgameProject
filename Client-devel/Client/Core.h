@@ -1,4 +1,5 @@
 #pragma once
+#include "Scene.h"
 class Core final
 {
 public:
@@ -9,7 +10,7 @@ public:
 
 private:
 	RenderWindow* window = nullptr;
-	stack<void> scenes;
+	stack<Scene*> scenes;
 
 	Event* event = nullptr;
 	Vector2f mousePosition{ 0.f, 0.f };

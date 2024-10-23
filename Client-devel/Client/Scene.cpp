@@ -24,7 +24,15 @@ bool Scene::GetQuit()
 
 void Scene::Destroy()
 {
-	// delete objects
+	if (backGround)
+	{
+		backGround->Destroy();
+	}
+
+	for (auto& obj : objects)
+	{
+		obj->Destroy();
+	}
 }
 
 void Scene::Input(Event* event)
@@ -54,15 +62,22 @@ void Scene::Update(const Vector2f& mousePosition)
 		obj->Update(mousePosition);
 	}
 
-	// button behavior
-
+	for (auto& btn : buttons)
+	{
+		btn.second->Update(mousePosition);
+	}
 }
 
 void Scene::Update(const float& deltaTime)
 {
 	for (auto& obj : objects)
 	{
-		obj->Update(deltaTime)
+		obj->Update(deltaTime);
+	}
+
+	for (auto& txt : texts)
+	{
+		txt.second->Update();
 	}
 }
 
@@ -76,5 +91,15 @@ void Scene::Render()
 	for (auto& obj : objects)
 	{
 		obj->Render(window);
+	}
+
+	for (auto& btn : buttons)
+	{
+		btn.second->Render(window);
+	}
+
+	for (auto& txt : texts)
+	{
+		txt.second->Render(window);
 	}
 }
