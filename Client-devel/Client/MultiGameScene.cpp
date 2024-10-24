@@ -9,9 +9,7 @@ MultiGameScene::MultiGameScene(stack<Scene*>* scenes, RenderWindow* window)
 
 void MultiGameScene::Init()
 {
-
-
-	//buttons["Game Setting"] = new ButtonObject("Game Setting")
+	texts["Here is MultiGame Scene"] = new TextObject("Here is MultiGame Scene", "Font/CookieRunFont_TTF/CookieRun_Bold.ttf", { 360.f, 150.f });
 }
 
 void MultiGameScene::Destroy()
@@ -26,6 +24,17 @@ void MultiGameScene::Input(Event* event)
 		// 키보드 입력
 	case Event::KeyPressed:
 	{
+		switch (event->key.code)
+		{
+		case Keyboard::Escape:
+		{
+			scenes->top()->Destroy();
+			scenes->pop();
+		}
+		default:
+			break;
+		}
+
 		break;
 	}
 

@@ -42,9 +42,6 @@
     <Filter Include="소스 파일\03.Object\03.TextObject">
       <UniqueIdentifier>{e44580b8-86b6-4dee-9a19-efb27ebd0862}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\02.Scene\03.LoginScene">
-      <UniqueIdentifier>{acb55546-3f00-469a-a548-1bd8505e27f7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\02.Scene\04.SignInScene">
       <UniqueIdentifier>{0b40f5ac-fb80-49c2-a35a-8bc655eaaa0a}</UniqueIdentifier>
     </Filter>
@@ -59,6 +56,9 @@
     </Filter>
     <Filter Include="소스 파일\02.Scene\02.MainLobbyScene">
       <UniqueIdentifier>{c1d66128-9504-47e1-92dc-8a177920f1ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Scene\03.SignUpScene">
+      <UniqueIdentifier>{acb55546-3f00-469a-a548-1bd8505e27f7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +86,6 @@
     <ClCompile Include="TextObject.cpp">
       <Filter>소스 파일\03.Object\03.TextObject</Filter>
     </ClCompile>
-    <ClCompile Include="LoginScene.cpp">
-      <Filter>소스 파일\02.Scene\03.LoginScene</Filter>
-    </ClCompile>
     <ClCompile Include="MainLobbyScene.cpp">
       <Filter>소스 파일\02.Scene\02.MainLobbyScene</Filter>
     </ClCompile>
@@ -100,6 +97,9 @@
     </ClCompile>
     <ClCompile Include="SignInScene.cpp">
       <Filter>소스 파일\02.Scene\04.SignInScene</Filter>
+    </ClCompile>
+    <ClCompile Include="SignUpScene.cpp">
+      <Filter>소스 파일\02.Scene\03.SignUpScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -127,9 +127,6 @@
     <ClInclude Include="TextObject.h">
       <Filter>소스 파일\03.Object\03.TextObject</Filter>
     </ClInclude>
-    <ClInclude Include="LoginScene.h">
-      <Filter>소스 파일\02.Scene\03.LoginScene</Filter>
-    </ClInclude>
     <ClInclude Include="MainLobbyScene.h">
       <Filter>소스 파일\02.Scene\02.MainLobbyScene</Filter>
     </ClInclude>
@@ -141,6 +138,9 @@
     </ClInclude>
     <ClInclude Include="SignInScene.h">
       <Filter>소스 파일\02.Scene\04.SignInScene</Filter>
+    </ClInclude>
+    <ClInclude Include="SignUpScene.h">
+      <Filter>소스 파일\02.Scene\03.SignUpScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
