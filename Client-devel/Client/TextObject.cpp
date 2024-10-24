@@ -26,9 +26,19 @@ bool TextObject::IsActive() const
 	return isActive;
 }
 
+bool TextObject::IsSelected() const
+{
+	return isSelected;
+}
+
 void TextObject::SetActive(bool active)
 {
 	this->isActive = active;
+}
+
+void TextObject::SetSelected(bool selected)
+{
+	this->isSelected = selected;
 }
 
 void TextObject::Update()

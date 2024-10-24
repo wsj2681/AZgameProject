@@ -10,6 +10,8 @@ private:
 
 	bool isActive = true;
 
+	bool isSelected = false;
+
 	Font* font = nullptr;
 
 public:
@@ -17,7 +19,10 @@ public:
 	void Destroy();
 
 	bool IsActive() const;
+	bool IsSelected() const;
+
 	void SetActive(bool active);
+	void SetSelected(bool selected);
 
 	void Update();
 
