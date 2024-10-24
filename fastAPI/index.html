@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>게시판</h1>
+        
+        <div class="form-container" id="signup-section">
+            <h2>회원가입</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-username" placeholder="사용자 이름" required>
+                <input type="email" id="signup-email" placeholder="이메일" required>
+                <input type="password" id="signup-password" placeholder="비밀번호" required>
+                <button type="submit">가입하기</button>
+            </form>
+        </div>
+
+        <div class="form-container" id="login-section">
+            <h2>로그인</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="사용자 이름" required>
+                <input type="password" id="login-password" placeholder="비밀번호" required>
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+
+        <div id="message"></div>
+
+        <div id="post-section" style="display:none;">
+            <h2>게시물 목록</h2>
+            <ul id="post-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
